@@ -35,7 +35,7 @@ ENV KAFKA_HOME=/opt/confluent-kafka
 #CMD ["echo","Image created"]
 WORKDIR /opt/confluent-kafka/bin/
 
-COPY ../run.sh run.sh
+COPY run.sh run.sh
 COPY target kafka-streams-examples-6.0.0-standalone.jar
 RUN chmod 777 /opt/confluent-kafka/
 RUN chmod 777 run.sh
