@@ -15,24 +15,6 @@ RUN cd /opt \
 # Export environment variables
 ENV KAFKA_HOME=/opt/confluent-kafka
 
-
-
-# copying third-party dpendencies into custom lib
-#COPY lib/ $KAFKA_HOME/share/java/kafka-connect-custom/
-
-
-
-#COPY cassandra /opt/confluent-kafka/share/java/kafka-connect-cassandra
-#
-## Set classpath keeping kafka libraries first
-#ENV CLASSPATH="$CLASSPATH:$KAFKA_HOME/share/java/kafka-connect-custom/*"
-
-# Set Permissions
-#RUN useradd -u 882634 msheth2
-#RUN useradd -u 572812 pdpbddev
-#RUN useradd -u 572815 pdpbdprd
-#USER 882634
-#CMD ["echo","Image created"]
 WORKDIR /opt/confluent-kafka/bin/
 
 COPY run.sh run.sh
