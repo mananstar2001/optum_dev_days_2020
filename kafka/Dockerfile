@@ -18,7 +18,7 @@ ENV KAFKA_HOME=/opt/confluent-kafka
 WORKDIR /opt/confluent-kafka/bin/
 
 COPY run.sh run.sh
-COPY target kafka-streams-examples-6.0.0-standalone.jar
+COPY target/kafka-streams-examples-6.0.0-standalone.jar kafka-streams-examples-6.0.0-standalone.jar
 RUN chmod 777 /opt/confluent-kafka/
 RUN chmod 777 run.sh
 ENTRYPOINT [ "sh","run.sh" ]
