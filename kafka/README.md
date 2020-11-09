@@ -82,6 +82,15 @@ The Kafka Streaming application codebase is available [here](https://github.com/
 ### Valdiate Application
 
  - The data that woudl be produced over producer terminal would be aggregated based on words and the resultatnt aggregated output would be displayed with its count over the consumer terminal.
+ 
+### Cleanup resources
+
+ - Being a good application developer, it necessary to use resource optimially, its better to free up resources after its d=being used.
+ - Please execute below command to clean up not required docker containers:
+    ```sh
+    $ sudo su
+    $ docker kill <container_id>
+    ``` 
 
 
 ## Future Improvements
